@@ -7,23 +7,20 @@ body {
     padding: 7em 0;
 }
 
-.nav-logo {
-    object-fit: cover;
-    height: 100%;
-    width: auto;
+.ufc-logo {
+    width: 80px;
+    height: auto;
+
 }
 
 .title {
     font-family: 'Montserrat', sans-serif;
 }
 
-.test {
-    height: 100px;
+
+
+.header-links {
+    font-family: 'Ubuntu', sans-serif;
+    color: black;
+    font-size: 1.3rem;
 }
-
-
-/* https://jsfiddle.net/p57w5/ */
-
-/* https://pt.stackoverflow.com/questions/6740/pagina%C3%A7%C3%A3o-simples-em-jquery-javascript */
-
-/* https://preview.colorlib.com/theme/bootstrap/website-menu-15/# */
