@@ -1,0 +1,29 @@
+
+body {
+    font-family: 'Vollkorn', serif;
+}
+
+.section-padding {
+    padding: 7em 0;
+}
+
+.nav-logo {
+    object-fit: cover;
+    height: 100%;
+    width: auto;
+}
+
+.title {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.test {
+    height: 100px;
+}
+
+
+/* https://jsfiddle.net/p57w5/ */
+
+/* https://pt.stackoverflow.com/questions/6740/pagina%C3%A7%C3%A3o-simples-em-jquery-javascript */
+
+/* https://preview.colorlib.com/theme/bootstrap/website-menu-15/# */
