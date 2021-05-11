@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu&family=Vollkorn&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="/assets/Icons/css/all.css">
     <title>UFC Rankings | TOP 15</title>
 </head>
 
@@ -48,27 +49,33 @@
                     <h1 class="title">Ranking dos Atletas</h1>
                 </div>
             </div>
+            <div class="row">
+                <div class="col d-flex flex-column">
+                    <a class="add-atleta-link mb-1"  href="formAtleta.html"><i class="fas fa-plus"></i></a>
+                    <span>Adicionar Atleta</span>
+                </div>
+            </div>
         </div>
-        <div class="container">
-            <table class="table table-responsive  mb-5">
-                <thead>
+
+        <div class="container table-responsive">
+            <table class="table align-middle">
+                <thead class="table-dark align-middle">
                     <tr>
-                        <th scope="col">Posição</th>
-                        <th scope="col">Nome</th>
-                        <th scope="col">Vitórias</th>
-                        <th scope="col">Derrotas</th>
-                        <th scope="col">Ações</th>
+                        <th>Posição</th>
+                        <th>Nome</th>
+                        <th>Vitórias</th>
+                        <th>Derrotas</th>
+                        <th>Ações</th>
                     </tr>
                 </thead>
-                <tbody>
-
-                </tbody>
+                <tbody></tbody>
             </table>
+            
         </div>
         <div class="text-center">
-            <button class="btn btn-primary" id="anterior" disabled>&lsaquo; Anterior</button>
+            <button class="btn btn-primary"id="anterior" >&lsaquo; Anterior</button>
             <span id="numeracao"></span>
-            <button class="btn btn-primary" id="proximo" disabled>Próximo &rsaquo;</button>
+            <button class="btn btn-primary" id="proximo" >Próxima &rsaquo;</button>
         </div>
     </main>
 

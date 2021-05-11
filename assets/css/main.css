@@ -26,3 +26,21 @@ body {
 }
 
 
+.add-atleta-link {
+    text-decoration: none;
+    
+}
+
+.add-atleta-link i {
+    font-size: 1.8em;
+}
+
+
+.borda-redonda {
+    border-radius: 2rem;
+}
+
+.form-background {
+    background-color: whitesmoke;
+    padding: 2rem;
+}

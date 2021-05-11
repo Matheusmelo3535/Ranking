@@ -1,4 +1,4 @@
-let tamanhoDaPagina = 5;
+let tamanhoDaPagina = 6;
 let pagina = 0;
 
 
@@ -12,7 +12,8 @@ let lutadores = [
     ['6', 'Vicente Luque', '12', '2'],
     ['7', 'Michael Chiesa', '21', '11'],
     ['8', 'Demian Maia', '28', '4'],
-    ['9', 'Neil Magny', '14', '5']
+    ['9', 'Neil Magny', '14', '5'],
+    ['10','Geoff Neal', '15', '2']
 
 
 ]
@@ -25,22 +26,25 @@ function paginar() {
         tbody.append(
             $('<tr>')
                 .append($('<td>').append(lutadores[i][0]))
-                .append($('<td >').append(lutadores[i][1]))
-                .append($('<td >').append(lutadores[i][2]))
-                .append($('<td >').append(lutadores[i][3]))
-                .append($('<button  class="btn">}').append("Editar"))
-                .append($('<button  class="btn">}').append("Deletar"))
+                .append($('<td>').append(lutadores[i][1]))
+                .append($('<td>').append(lutadores[i][2]))
+                .append($('<td>').append(lutadores[i][3]))
+                .append($('<td>').append($('<button class="btn btn-primary m-2">}').append($('<i class="fas fa-edit">')))
+                    .append($('<button class="btn btn-danger m-2">}').append($('<i class="far fa-trash-alt">')))
+                    .append($('<button class="btn btn-success m-2">').append($('<i class="fas fa-eye">'))))
+                 
         )
     }
     $('#numeracao').text('Página ' + (pagina + 1) + ' de ' + Math.ceil(lutadores.length / tamanhoDaPagina));
 }
 
 
+
+
 function ajustarBotoes() {
-    $('#proximo').prop('disabled', lutadores.length <= tamanhoDaPagina || pagina > lutadores.length / tamanhoDaPagina - 1);
+    $('#proximo').prop('disabled', lutadores.length <= tamanhoDaPagina || pagina == Math.ceil(lutadores.length / tamanhoDaPagina) - 1);
     $('#anterior').prop('disabled', lutadores.length <= tamanhoDaPagina || pagina == 0);
 }
-
 
 $(function() {
     $('#proximo').click(function() {
@@ -59,4 +63,6 @@ $(function() {
     });
     paginar();
     ajustarBotoes();
+    
+    
 });
