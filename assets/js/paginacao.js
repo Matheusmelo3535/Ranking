@@ -24,10 +24,12 @@ function paginar() {
     for(let i = pagina * tamanhoDaPagina; i < lutadores.length && i < (pagina+1) * tamanhoDaPagina; i++) {
         tbody.append(
             $('<tr>')
-                .append($('<td style="width: 10%">').append(lutadores[i][0]))
-                .append($('<td>').append(lutadores[i][1]))
-                .append($('<td>').append(lutadores[i][2]))
-                .append($('<td>').append(lutadores[i][3]))
+                .append($('<td>').append(lutadores[i][0]))
+                .append($('<td >').append(lutadores[i][1]))
+                .append($('<td >').append(lutadores[i][2]))
+                .append($('<td >').append(lutadores[i][3]))
+                .append($('<button  class="btn">}').append("Editar"))
+                .append($('<button  class="btn">}').append("Deletar"))
         )
     }
     $('#numeracao').text('Página ' + (pagina + 1) + ' de ' + Math.ceil(lutadores.length / tamanhoDaPagina));
