@@ -16,7 +16,7 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5 shadow">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light mb-2 shadow">
             <div class="container">
                 <a class="navbar-brand" href="#">
                     <img src="/assets/images/ufc_logo.png" alt="" class="d-inline-block align-text-top ufc-logo">
@@ -42,21 +42,44 @@
             </div>
         </nav>
     </header>
-    <main>
-        <div class="container mb-5">
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="5000">
+                <img src="/assets/images/ufc-banner.jpg" class="d-block w-100 img-carousel" alt="...">
+                <div class="carousel-caption d-md-block">
+                    <h1>Dobronx vs Chandler</h1>
+                    <h2>UFC 262</h2>
+                    <h3>Confira nesse sabádo 15/05 </h3>
+                </div>
+            </div>
+
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="/assets/images/ufc-venum.jpg" class="d-block w-100 img-carousel" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div class="container mb-5">
+        <div class="container">
             <div class="row">
-                <div class="col d-flex justify-content-center">
+                <div class="col d-flex justify-content-center p-4">
                     <h1 class="title">Ranking dos Atletas</h1>
                 </div>
             </div>
-            <div class="row">
-                <div class="col d-flex flex-column">
-                    <a class="add-atleta-link mb-1"  href="formAtleta.html"><i class="fas fa-plus"></i></a>
+            <div class="row mb-3">
+                <div class="col d-flex">
+                    <a class="add-atleta-link  me-2" href="formAtleta.html"><i class="fas fa-plus"></i></a>
                     <span>Adicionar Atleta</span>
                 </div>
             </div>
         </div>
-
         <div class="container table-responsive">
             <table class="table align-middle">
                 <thead class="table-dark align-middle">
@@ -70,20 +93,18 @@
                 </thead>
                 <tbody></tbody>
             </table>
-            
         </div>
         <div class="text-center">
-            <button class="btn btn-primary"id="anterior" >&lsaquo; Anterior</button>
+            <button class="btn btn-primary" id="anterior">&lsaquo; Anterior</button>
             <span id="numeracao"></span>
-            <button class="btn btn-primary" id="proximo" >Próxima &rsaquo;</button>
+            <button class="btn btn-primary" id="proximo">Próxima &rsaquo;</button>
         </div>
-    </main>
-
-
-
-
-
-
+    </div>
+    <footer class="text-center">
+        <div class="container p-3 d-flex justify-content-center align-items-center flex-column">
+            <span>© 2021 Copyright UFC. Todos os direitos reservados.</span>
+        </div>
+    </footer>
     <script src="/assets/js/jquery-3.5.1.slim.min.js"></script>
     <script src="/assets/js/bootstrap.bundle.min.js"></script>
     <script src="/assets/js/paginacao.js"></script>

@@ -44,3 +44,39 @@ body {
     background-color: whitesmoke;
     padding: 2rem;
 }
+
+
+
+
+footer {
+    background-color:black;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+footer span {
+    color: whitesmoke;
+}
+
+
+.ufc-banner {
+
+  background-image: url(/assets/images/ufc-banner.jpg); 
+  background-color: #cccccc; 
+  height: 700px; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+    
+}
+
+
+.img-carousel {
+    object-fit: cover;
+    object-position: 50% 30%;
+    height: 600px;
+}
+

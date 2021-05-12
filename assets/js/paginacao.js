@@ -29,9 +29,9 @@ function paginar() {
                 .append($('<td>').append(lutadores[i][1]))
                 .append($('<td>').append(lutadores[i][2]))
                 .append($('<td>').append(lutadores[i][3]))
-                .append($('<td>').append($('<button class="btn btn-primary m-2">}').append($('<i class="fas fa-edit">')))
-                    .append($('<button class="btn btn-danger m-2">}').append($('<i class="far fa-trash-alt">')))
-                    .append($('<button class="btn btn-success m-2">').append($('<i class="fas fa-eye">'))))
+                .append($('<td>').append($('<button class="btn btn-primary m-2">}').append($('<i class="fas fa-eye">')))
+                    .append($('<button class="btn btn-success m-2">}').append($('<i class="fas fa-edit">')))
+                    .append($('<button class="btn btn-danger m-2">').append($('<i class="far fa-trash-alt">'))))
                  
         )
     }
@@ -66,3 +66,6 @@ $(function() {
     
     
 });
+
+
+
