@@ -1,6 +1,7 @@
 
 body {
     font-family: 'Vollkorn', serif;
+    padding-bottom: 5rem;
 }
 
 .section-padding {
@@ -50,7 +51,7 @@ body {
 
 footer {
     background-color:black;
-    position: relative;
+    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;

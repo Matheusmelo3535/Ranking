@@ -16,3 +16,14 @@ function addOptions(selectFormAtleta)
     
 }
 
+$(document).ready(function(){
+    let teste = $('#AtletaFormNome'); 
+    if(localStorage.getItem('lutadorview')){            
+        let data = localStorage.getItem('lutadorview');
+        let arraydata = data.split(',');
+        teste.val(arraydata[1])
+        
+       
+    }
+});
+
