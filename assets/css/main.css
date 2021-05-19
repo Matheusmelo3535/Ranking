@@ -81,3 +81,14 @@ footer span {
     height: 600px;
 }
 
+
+.view-do-atleta h4 {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.view-do-atleta h5 {
+    font-size: 1.5rem;
+    line-height: 2;
+}
+
