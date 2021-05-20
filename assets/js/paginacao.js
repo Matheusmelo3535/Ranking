@@ -39,13 +39,22 @@ function paginar() {
     $('#numeracao').text('Página ' + (pagina + 1) + ' de ' + Math.ceil(lutadores.length / tamanhoDaPagina));
     viewAtleta();
     deleteAtleta();
+    editAtleta();
+    
 }
 
 
-
+function editAtleta() {
+    $('.edit').click(function() {
+        let valor = parseInt($(this).attr('value'));
+        let lutadorEdit = lutadores[valor];
+        localStorage.setItem('lutadorEdit', lutadorEdit)
+        window.location.href="editAtleta.html";
+    })
+}
 
 function ajustarBotoes() {
-    $('#proximo').prop('disabled', lutadores.length <= tamanhoDaPagina || pagina == Math.ceil(lutadores.length / tamanhoDaPagina) - 1);
+    $('#proximo').prop('disabled', lutadores.length <= tamanhoDaPagina || pagina >= Math.ceil(lutadores.length / tamanhoDaPagina) - 1);
     $('#anterior').prop('disabled', lutadores.length <= tamanhoDaPagina || pagina == 0);
 }
 
@@ -68,7 +77,16 @@ function deleteAtleta(){
 }
 
 
-
+function addAtletaNoArray() {
+    if(localStorage.getItem('novoAtleta')) {
+        let data = localStorage.getItem('novoAtleta');
+        let atleta = data.split(',');
+        lutadores.push(atleta);
+        paginar();
+        localStorage.removeItem('novoAtleta');
+        
+    }
+}
 
 
 $(function() {
@@ -86,6 +104,7 @@ $(function() {
             ajustarBotoes();
         }
     });
+    addAtletaNoArray();
     paginar();
     ajustarBotoes();
       
