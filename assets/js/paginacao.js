@@ -40,8 +40,6 @@ function paginar() {
     viewAtleta();
     deleteAtleta();
     editAtleta();
-    addAtletaNoArray();
-    atualizarAtletaNoArray();
     
 }
 
@@ -75,7 +73,6 @@ function deleteAtleta(){
         let valor = parseInt($(this).attr('value'));
         lutadores.splice(valor, 1);
         paginar();
-       
     })
 }
 
@@ -85,7 +82,6 @@ function addAtletaNoArray() {
         let data = localStorage.getItem('novoAtleta');
         let atleta = data.split(',');
         lutadores.push(atleta);
-        paginar();
         localStorage.removeItem('novoAtleta');
         
     }
