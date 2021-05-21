@@ -1,6 +1,6 @@
 let rankingsDisponiveis = ['11', '12', '13', '14', '15'];
 let selectFormAtleta = document.querySelector('.form-select');
-let formAddAtleta = document.querySelector('form');
+let formAddAtleta = document.querySelector('.form-add-atleta');
 addOptions(selectFormAtleta);
 
 function addOptions(selectForm)

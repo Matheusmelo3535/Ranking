@@ -40,6 +40,8 @@ function paginar() {
     viewAtleta();
     deleteAtleta();
     editAtleta();
+    addAtletaNoArray();
+    atualizarAtletaNoArray();
     
 }
 
@@ -48,7 +50,8 @@ function editAtleta() {
     $('.edit').click(function() {
         let valor = parseInt($(this).attr('value'));
         let lutadorEdit = lutadores[valor];
-        localStorage.setItem('lutadorEdit', lutadorEdit)
+        localStorage.setItem('IndiceAtletaEdit', valor);
+        localStorage.setItem('lutadorEdit', lutadorEdit);
         window.location.href="editAtleta.html";
     })
 }
@@ -88,6 +91,16 @@ function addAtletaNoArray() {
     }
 }
 
+function atualizarAtletaNoArray() {
+    if(localStorage.getItem('atletaNovoEdit') && localStorage.getItem('IndiceAtletaEdit')) {
+        let data = localStorage.getItem('atletaNovoEdit');
+        let indice = localStorage.getItem('IndiceAtletaEdit');
+        let atletaAtualizado = data.split(',');
+        lutadores[indice] = atletaAtualizado;
+        localStorage.removeItem('atletaNovoEdit');
+    }
+}
+
 
 $(function() {
     $('#proximo').click(function() {
@@ -105,6 +118,7 @@ $(function() {
         }
     });
     addAtletaNoArray();
+    atualizarAtletaNoArray();
     paginar();
     ajustarBotoes();
       
