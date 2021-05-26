@@ -92,3 +92,9 @@ footer span {
     line-height: 2;
 }
 
+.errorMsg {
+    color: red;
+}
+
+
+

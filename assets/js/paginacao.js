@@ -1,7 +1,5 @@
 let tamanhoDaPagina = 6;
 let pagina = 0;
-
-
 let lutadores = [
     ['C', 'Kamaru Usman', '18', '0'],
     ['1', 'Colby Covington', '23', '2'],
@@ -14,11 +12,7 @@ let lutadores = [
     ['8', 'Demian Maia', '28', '4'],
     ['9', 'Neil Magny', '14', '5'],
     ['10','Geoff Neal', '15', '2']
-
-
 ]
-
-
 
 function paginar() {
     $('table > tbody > tr').remove();
@@ -41,6 +35,23 @@ function paginar() {
     deleteAtleta();
     editAtleta();
     
+}
+
+function searchAtleta() {
+    $('#search-request').click(function() {
+        let pesquisa = $('#search-input').val();
+        let Regex = new RegExp(pesquisa, "i");
+        if(!pesquisa) {
+            $('.errorMsg').text('Campo em branco!');
+            return;
+        }
+        let buscaLutador  = lutadores.find(function(lutador) {
+            if(Regex.test(lutador[1])){
+                lutadores = [lutador];
+                paginar();
+            }
+        });
+    })
 }
 
 
@@ -117,8 +128,5 @@ $(function() {
     atualizarAtletaNoArray();
     paginar();
     ajustarBotoes();
-      
+    searchAtleta();
 });
-
-
-
