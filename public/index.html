@@ -74,10 +74,22 @@
                 </div>
             </div>
             <div class="row mb-3">
-                <div class="col d-flex">
+                <div class="col-sm-6 d-flex mb-5">
                     <a class="add-atleta-link  me-2" href="formAtleta.html"><i class="fas fa-plus"></i></a>
                     <span>Adicionar Atleta</span>
                 </div>
+                <div class="col-sm-3 d-flex align-items-center mb-5 search-div">
+                    <div class="input-group">
+                        <input class="form-control" type="search" placeholder="buscar atleta" id="search-input">
+                    </div>
+                    <button class="btn btn-primary h-100" id="search-request">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="col">
+                    <span class="errorMsg"></span>
+                </div>
+
             </div>
         </div>
         <div class="container table-responsive">
